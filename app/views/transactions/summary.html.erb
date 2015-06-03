@@ -5,8 +5,10 @@
 <body class = "bground">
   <div class = "test_style">
     <h1>WALLET</h1>
+    <p id="notice"><%= notice %></p>
     <div>
-      <p> You Have a balance of $<%= @balance %> dollars. </p>
+      <p> You have a balance of $<%= @balance %> dollars. </p>
+      <p> You have a made <%= @transaction_count %> transactions. </p>
     </div>
     <div>
       <%= link_to 'Create New Transaction', new_transaction_path %> |

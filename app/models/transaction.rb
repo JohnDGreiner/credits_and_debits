@@ -8,4 +8,8 @@ class Transaction < ActiveRecord::Base
     balance
   end
 
+  def self.count_transactions
+    self.all.count
+  end
+
 end
