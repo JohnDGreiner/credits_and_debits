@@ -61,6 +61,10 @@ class TransactionsController < ApplicationController
     end
   end
 
+  def summary
+    @tester = "Hi John"
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_transaction
@@ -71,4 +75,6 @@ class TransactionsController < ApplicationController
     def transaction_params
       params.require(:transaction).permit(:organization, :is_credit, :amount)
     end
+
+
 end
