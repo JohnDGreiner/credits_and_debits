@@ -1,1 +1,15 @@
-<%= @tester %>
+<head>
+  <title>"Your Wallet"</></title>
+</head>
+
+<body class = "bground">
+  <div class = "test_style">
+    <div>
+      <%= @balance %>
+    </div>
+    <div>
+      <%= link_to 'Create New Transaction', new_transaction_path %> |
+      <%= link_to 'Itemized Transactions', transactions_path %>
+    </div>
+  </div>
+</body>

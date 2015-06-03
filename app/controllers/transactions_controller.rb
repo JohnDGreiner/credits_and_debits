@@ -63,6 +63,7 @@ class TransactionsController < ApplicationController
 
   def summary
     @tester = "Hi John"
+    @balance = Transaction.balance
   end
 
   private

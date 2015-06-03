@@ -3,9 +3,34 @@
 one:
   organization: MyString
   is_credit: false
-  amount: 9.99
+  amount: 1.00
 
 two:
   organization: MyString
+  is_credit: true
+  amount: 2.00
+
+credit_one:
+  organization: MyString
+  is_credit: true
+  amount: 100.00
+
+credit_two:
+  organization: MyString
+  is_credit: true
+  amount: 50.50
+
+credit_three:
+  organization: MyString
+  is_credit: true
+  amount: 10.00
+
+debit_one:
+  organization: MyString
   is_credit: false
-  amount: 9.99
+  amount: 20.00
+
+debit_two:
+  organization: MyString
+  is_credit: false
+  amount: 90.90
