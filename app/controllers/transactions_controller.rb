@@ -65,7 +65,7 @@ class TransactionsController < ApplicationController
     @tester = "Hi John"
     @balance = Transaction.balance
     @transaction_count = Transaction.count_transactions
-    if @balance < 400
+    if @balance < 0
       flash.now[:notice] = 'Time to make some money.'
     end
   end
