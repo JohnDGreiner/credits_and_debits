@@ -16,9 +16,9 @@ ActiveRecord::Schema.define(version: 20150603173208) do
   create_table "transactions", force: :cascade do |t|
     t.string   "organization"
     t.boolean  "is_credit"
-    t.decimal  "amount"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.decimal  "amount",       precision: 30, scale: 2
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
   end
 
 end

@@ -62,7 +62,7 @@ class TransactionsController < ApplicationController
   end
 
   def summary
-    @balance = Transaction.balance
+    @balance = Transaction.balance(number_with_precision(
     @transaction_count = Transaction.count_transactions
     @expensive_org = Transaction.most_expensive_organization
     @current_transactions = Transaction.curr_month_trans_count
