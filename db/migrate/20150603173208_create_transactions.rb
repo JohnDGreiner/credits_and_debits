@@ -3,7 +3,7 @@ class CreateTransactions < ActiveRecord::Migration
     create_table :transactions do |t|
       t.string :organization
       t.boolean :is_credit
-      t.decimal :amount, precision: 30, :scale => 2
+      t.decimal :amount
 
       t.timestamps null: false
     end
