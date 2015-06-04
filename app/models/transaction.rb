@@ -40,5 +40,23 @@ class Transaction < ActiveRecord::Base
     spent
   end
 
+  def self.curr_month_largest_expense
+    array = self.all.select { |m| m.created_at.month == Time.now.month && !m.is_credit}
+    array = array.sort_by {|a| a.amount}
+    array.last.amount
+  end
+
+  def self.largest_expense
+    array = self.all.select { |m| !m.is_credit}
+    array = array.sort_by {|a| a.amount}
+    array.last.amount
+  end
+
+  def self.most_expensive_organization
+    array = self.all.group('organization')
+    expensive = array.select { |o| !o.is_credit}
+    expensive = expensive.sort_by {|a| a.amount}
+    expensive.last.organization
+  end
 
 end

@@ -30,14 +30,14 @@ credit_three:
   amount: 10.00
   created_at: "2015-05-03 19:25:58"
 
-debit_one:
-  organization: MyString
-  is_credit: false
-  amount: 20.00
-  created_at: "2015-05-03 19:25:58"
-
 debit_two:
-  organization: MyString
+  organization: "bills"
   is_credit: false
   amount: 90.90
   created_at: "2015-06-03 19:25:58"
+
+debit_one:
+  organization: "food"
+  is_credit: false
+  amount: 20.00
+  created_at: "2015-05-03 19:25:58"

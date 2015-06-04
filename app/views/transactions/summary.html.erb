@@ -9,6 +9,8 @@
     <div>
       <p> You have a balance of $<%= @balance %> dollars. </p>
       <p> You have a made <%= @transaction_count %> transactions. </p>
+      <p> Most Exp <%= @expensive_org %>
+
     </div>
     <div>
       <%= link_to 'Create New Transaction', new_transaction_path %> |

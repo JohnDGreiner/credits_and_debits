@@ -62,9 +62,9 @@ class TransactionsController < ApplicationController
   end
 
   def summary
-    @tester = "Hi John"
     @balance = Transaction.balance
     @transaction_count = Transaction.count_transactions
+    @expensive_org = Transaction.most_expensive_organization
     if @balance < 0
       flash.now[:notice] = 'Time to make some money.'
     end
