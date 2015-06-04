@@ -4,12 +4,18 @@
 
 <body class = "bground">
   <div class = "test_style">
-    <h1>WALLET</h1>
+    <h1>Wallet Summary</h1>
     <p id="notice"><%= notice %></p>
     <div>
       <p> You have a balance of $<%= @balance %> dollars. </p>
-      <p> You have a made <%= @transaction_count %> transactions. </p>
-      <p> Most Exp <%= @expensive_org %>
+      <p> You have made <%= @transaction_count %> transactions.</p>
+      <p> You have made <%= @current_transactions %> transactions this month.</p>
+      <p> You have made <%= @previous_transactions %> transactions last month.</p>
+      <p> You have spent <%= @current_month_spent %> dollars this month.</p>
+      <p> You have spent <%= @previous_month_spent %> dollars last month</p>
+      <p> The largest transaction this month was <%= @current_month_largest %>. </p>
+      <p> The most you ever spent at once was <%= @largest_ever %>. </p>
+      <p> You spend too much money on: <%= @expensive_org %>.</p>
 
     </div>
     <div>

@@ -65,8 +65,15 @@ class TransactionsController < ApplicationController
     @balance = Transaction.balance
     @transaction_count = Transaction.count_transactions
     @expensive_org = Transaction.most_expensive_organization
+    @current_transactions = Transaction.curr_month_trans_count
+    @previous_transactions = Transaction.prev_month_trans_count
+    @current_month_spent = Transaction.curr_month_spent
+    @previous_month_spent = Transaction.prev_month_spent
+    @current_month_largest = Transaction.curr_month_largest_expense
+    @largest_ever = Transaction.largest_expense
+
     if @balance < 0
-      flash.now[:notice] = 'Time to make some money.'
+      flash.now[:notice] = 'Your Broke! Time to make some money.'
     end
   end
 
